@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -24,7 +25,7 @@ const teamMembers = [
 
 export default function Team() {
   useEffect(() => {
-    AOS.init({ once: true });
+    AOS.init({ once: true, duration: 800 });
   }, []);
 
   return (
@@ -37,12 +38,16 @@ export default function Team() {
         <div className="grid md:grid-cols-3 gap-8">
           {teamMembers.map((member, i) => (
             <div
-              key={i}
-              className="bg-[#150c2b]/60 border border-gray-800 p-6 rounded-xl text-center"
+              key={member.name}
+              className="bg-[#150c2b]/60 border border-gray-800 p-6 rounded-xl text-center hover:scale-105 transition-transform duration-300"
+              data-aos="fade-up"
+              data-aos-delay={i * 150}
             >
-              <img
+              <Image
                 src={member.image}
-                alt={member.name}
+                alt={`Foto ${member.name} - ${member.role}`}
+                width={96}
+                height={96}
                 className="w-24 h-24 mx-auto rounded-full mb-4 border-2 border-purple-400 object-cover"
               />
               <h2 className="text-xl font-semibold text-purple-400">
