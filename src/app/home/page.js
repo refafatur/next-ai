@@ -247,34 +247,35 @@ export default function Home() {
         </div>
       </section>
       {/* Section: Testimonials */}
-      <section
-        className="w-full max-w-4xl mt-24 px-4"
-        data-aos="fade-up"
-        data-aos-delay="500"
-      >
-        <h2 className="text-3xl font-bold text-white text-center mb-8">
-          What Our Users Say
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-[#18102e]/80 rounded-xl p-6 shadow-lg">
-            <p className="text-gray-300 italic mb-2">
-              "The AI tools here helped us launch our MVP in record time. Highly
-              recommended!"
-            </p>
-            <span className="text-[#a78bfa] font-semibold">
-              — Sarah, Startup Founder
-            </span>
-          </div>
-          <div className="bg-[#18102e]/80 rounded-xl p-6 shadow-lg">
-            <p className="text-gray-300 italic mb-2">
-              "Integration was seamless and the support team is fantastic."
-            </p>
-            <span className="text-[#a78bfa] font-semibold">
-              — Michael, Product Manager
-            </span>
-          </div>
-        </div>
-      </section>
+<section
+  className="w-full max-w-4xl mt-24 px-4"
+  data-aos="fade-up"
+  data-aos-delay="500"
+>
+  <h2 className="text-3xl font-bold text-white text-center mb-8">
+    What Our Users Say
+  </h2>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="bg-[#18102e]/80 rounded-xl p-6 shadow-lg">
+      <p className="text-gray-300 italic mb-2">
+        &quot;The AI tools here helped us launch our MVP in record time. Highly
+        recommended!&quot;
+      </p>
+      <span className="text-[#a78bfa] font-semibold">
+        — Sarah, Startup Founder
+      </span>
+    </div>
+    <div className="bg-[#18102e]/80 rounded-xl p-6 shadow-lg">
+      <p className="text-gray-300 italic mb-2">
+        &quot;Integration was seamless and the support team is fantastic.&quot;
+      </p>
+      <span className="text-[#a78bfa] font-semibold">
+        — Michael, Product Manager
+      </span>
+    </div>
+  </div>
+</section>
+
       {/* Section: Call to Action */}
       <section
         className="w-full max-w-3xl mt-24 mb-16 px-4 flex flex-col items-center"
