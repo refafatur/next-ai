@@ -1,103 +1,88 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Image from "next/image";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  useEffect(() => {
+    AOS.init({ once: true });
+  }, []);
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <main className="relative flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-[#0a0618] to-[#18102e] overflow-hidden">
+      {/* Background gradient circles */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div
+          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[1200px] h-[1200px] rounded-full bg-gradient-to-br from-[#2a1a5e]/30 to-[#1a1040]/0 blur-3xl opacity-60"
+          data-aos="fade"
+        ></div>
+      </div>
+      {/* Launch badge */}
+      <div className="mt-24 mb-6" data-aos="fade-down">
+        <span className="px-4 py-2 rounded-full bg-[#2a1a5e]/40 text-white text-sm font-medium shadow">
+          🚀 Launch Your AI Startup with
+        </span>
+      </div>
+      {/* Title */}
+      <h1
+        className="text-white text-5xl md:text-6xl font-bold text-center leading-tight"
+        data-aos="fade-up"
+      >
+        OpenAI + Next.js SaaS
+        <br />
+        Boilerplate and Starter Kit
+      </h1>
+      {/* Subtitle */}
+      <p
+        className="mt-8 text-gray-300 text-lg text-center max-w-2xl"
+        data-aos="fade-up"
+        data-aos-delay="100"
+      >
+        Ideal for developers looking to build SaaS applications using OpenAI and
+        Next.js, this starter kit comes with pre-configured and pre-built
+        examples, making it easier to quickly kickstart your AI startup.
+      </p>
+      {/* Button */}
+      <div className="mt-10" data-aos="zoom-in" data-aos-delay="200">
+        <button className="px-8 py-3 rounded-lg bg-[#7c3aed] text-white text-lg font-semibold shadow-lg hover:bg-[#a78bfa] transition">
+          Try AI Examples
+        </button>
+      </div>
+
+      {/* Example cards section */}
+      <div
+        className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl px-4"
+        data-aos="fade-up"
+        data-aos-delay="300"
+      >
+        <div className="bg-[#18102e]/80 rounded-xl p-6 shadow-lg flex flex-col items-center">
+          <h2 className="mt-4 text-white text-xl font-semibold">AI Chatbot</h2>
+          <p className="mt-2 text-gray-400 text-center">
+            Conversational AI powered by OpenAI GPT for customer support and
+            automation.
+          </p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="bg-[#18102e]/80 rounded-xl p-6 shadow-lg flex flex-col items-center">
+          <h2 className="mt-4 text-white text-xl font-semibold">
+            Text Summarizer
+          </h2>
+          <p className="mt-2 text-gray-400 text-center">
+            Instantly summarize articles, emails, or documents using AI.
+          </p>
+        </div>
+        <div className="bg-[#18102e]/80 rounded-xl p-6 shadow-lg flex flex-col items-center">
+          <h2 className="mt-4 text-white text-xl font-semibold">
+            Content Generator
+          </h2>
+          <p className="mt-2 text-gray-400 text-center">
+            Generate blog posts, product descriptions, and more with AI
+            assistance.
+          </p>
+        </div>
+      </div>
+
+    </main>
   );
 }
