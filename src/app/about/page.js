@@ -96,19 +96,20 @@ export default function About() {
       </div>
 
       {/* Testimonials */}
-      <div className="mt-24 w-full max-w-4xl px-4" data-aos="fade-up" data-aos-delay="500">
-        <h2 className="text-white text-3xl font-bold text-center mb-8">Apa Kata Pengguna?</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="bg-[#1c1433] rounded-xl p-6 text-gray-300">
-            <p>"AI Chatbot-nya sangat membantu dalam customer support kami!"</p>
-            <span className="block mt-4 text-sm text-purple-400">– Sarah, Customer Support Lead</span>
-          </div>
-          <div className="bg-[#1c1433] rounded-xl p-6 text-gray-300">
-            <p>"Fitur summarizer-nya memotong waktu saya membaca dokumen jadi setengahnya."</p>
-            <span className="block mt-4 text-sm text-purple-400">– Dimas, Legal Consultant</span>
-          </div>
-        </div>
-      </div>
+<div className="mt-24 w-full max-w-4xl px-4" data-aos="fade-up" data-aos-delay="500">
+  <h2 className="text-white text-3xl font-bold text-center mb-8">Apa Kata Pengguna?</h2>
+  <div className="grid md:grid-cols-2 gap-6">
+    <div className="bg-[#1c1433] rounded-xl p-6 text-gray-300">
+      <p>&quot;AI Chatbot-nya sangat membantu dalam customer support kami!&quot;</p>
+      <span className="block mt-4 text-sm text-purple-400">– Sarah, Customer Support Lead</span>
+    </div>
+    <div className="bg-[#1c1433] rounded-xl p-6 text-gray-300">
+      <p>&quot;Fitur summarizer-nya memotong waktu saya membaca dokumen jadi setengahnya.&quot;</p>
+      <span className="block mt-4 text-sm text-purple-400">– Dimas, Legal Consultant</span>
+    </div>
+  </div>
+</div>
+
 
       {/* Optional: Video Section */}
       
